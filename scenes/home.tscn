@@ -1,0 +1,87 @@
+[gd_scene load_steps=19 format=3 uid="uid://cq1bl6jc7sa80"]
+
+[ext_resource type="Texture2D" uid="uid://bkl3xjdndt1tp" path="res://assets/backgrounds/home_screen_bg.png" id="1_krot7"]
+[ext_resource type="Texture2D" uid="uid://d2xlckiyekodv" path="res://assets/sprites/dog_animation/idle 1.png" id="2_ju5sp"]
+[ext_resource type="Texture2D" uid="uid://c7kimjybao6ia" path="res://assets/sprites/dog_animation/idle 6.png" id="3_o7pnx"]
+[ext_resource type="Texture2D" uid="uid://dio6g0ommegn5" path="res://assets/sprites/dog_animation/idle 3.png" id="4_aish6"]
+[ext_resource type="Texture2D" uid="uid://biagfmbemgchk" path="res://assets/sprites/dog_animation/idle 2.png" id="5_snnha"]
+[ext_resource type="Texture2D" uid="uid://wqiwxo5rvjw0" path="res://assets/sprites/dog_animation/idle 4.png" id="6_e42qu"]
+[ext_resource type="Texture2D" uid="uid://5qcet5dkjv" path="res://assets/sprites/dog_animation/idle 10.png" id="7_ppa51"]
+[ext_resource type="Texture2D" uid="uid://joom7lwebguo" path="res://assets/sprites/dog_animation/idle 5.png" id="8_kc6b6"]
+[ext_resource type="Texture2D" uid="uid://5fle5cfrpi4r" path="res://assets/sprites/dog_animation/idle 14.png" id="9_jdxxw"]
+[ext_resource type="Texture2D" uid="uid://y4d1k02w58p8" path="res://assets/sprites/dog_animation/idle 9.png" id="10_6k6s7"]
+[ext_resource type="Texture2D" uid="uid://b1i7dxem0iyt6" path="res://assets/sprites/dog_animation/idle 17.png" id="11_rqor2"]
+[ext_resource type="Texture2D" uid="uid://ddoghhjl4d8e4" path="res://assets/sprites/dog_animation/idle 11.png" id="12_qmde4"]
+[ext_resource type="Texture2D" uid="uid://cjexg8uiyn5j7" path="res://assets/sprites/dog_animation/idle 19.png" id="13_wa7t7"]
+[ext_resource type="Texture2D" uid="uid://cvg8v2jrs1war" path="res://assets/sprites/dog_animation/idle 12.png" id="14_vysw7"]
+[ext_resource type="Texture2D" uid="uid://cf4tic2l3tusg" path="res://assets/sprites/dog_animation/idle 18.png" id="15_miq5y"]
+[ext_resource type="Texture2D" uid="uid://bc7pq5t8jkylc" path="res://assets/sprites/dog_animation/idle 13.png" id="16_mg211"]
+[ext_resource type="Script" uid="uid://c61orpfqcyo3l" path="res://scripts/animated_sprite_2d.gd" id="17_o7pnx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_sh163"]
+animations = [{
+"frames": [{
+"duration": 4.0,
+"texture": ExtResource("2_ju5sp")
+}, {
+"duration": 1.5,
+"texture": ExtResource("3_o7pnx")
+}, {
+"duration": 4.0,
+"texture": ExtResource("4_aish6")
+}, {
+"duration": 1.5,
+"texture": ExtResource("5_snnha")
+}, {
+"duration": 4.0,
+"texture": ExtResource("6_e42qu")
+}, {
+"duration": 1.5,
+"texture": ExtResource("7_ppa51")
+}, {
+"duration": 4.0,
+"texture": ExtResource("8_kc6b6")
+}, {
+"duration": 1.5,
+"texture": ExtResource("9_jdxxw")
+}, {
+"duration": 4.0,
+"texture": ExtResource("10_6k6s7")
+}, {
+"duration": 1.5,
+"texture": ExtResource("11_rqor2")
+}, {
+"duration": 4.0,
+"texture": ExtResource("12_qmde4")
+}, {
+"duration": 1.5,
+"texture": ExtResource("13_wa7t7")
+}, {
+"duration": 4.0,
+"texture": ExtResource("14_vysw7")
+}, {
+"duration": 1.5,
+"texture": ExtResource("15_miq5y")
+}, {
+"duration": 4.0,
+"texture": ExtResource("16_mg211")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[node name="Home" type="Node2D"]
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+offset_right = 720.0
+offset_bottom = 900.0
+texture = ExtResource("1_krot7")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(381, 554)
+scale = Vector2(0.8976261, 0.9221219)
+sprite_frames = SubResource("SpriteFrames_sh163")
+animation = &"idle"
+frame_progress = 0.86856794
+script = ExtResource("17_o7pnx")
