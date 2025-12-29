@@ -21,17 +21,30 @@ var gems : int = 50:
 		gems_changed.emit(gems)
 		save_data()
 
-var hunger : int = 50:
+var hunger : int = 100:
 	set(value):
 		hunger = clampi(value, 0, 100)
 		hunger_changed.emit(hunger)
 		save_data()
 		
-var energy : int = 50:
+var energy : int = 100:
 	set(value):
 		energy = clampi(value, 0, 100)
 		energy_changed.emit(energy)
 		save_data()
+		
+func _ready():
+	load_data()
+	var timer = Timer.new()
+	timer.wait_time = 3.0 
+	timer.autostart = true
+	add_child(timer)
+	timer.timeout.connect(_on_hunger_timer_timeout)
+	
+func _on_hunger_timer_timeout():
+	if hunger > 0:
+		hunger -= 1
+		print("Pet is getting hungry! Current hunger: ", hunger)
 
 var food_inventory: Dictionary = {
 	"Apple": 5,
@@ -39,21 +52,15 @@ var food_inventory: Dictionary = {
 	"Pizza": 5,
 	"Fish": 5
 }
-# Called when the node enters the scene tree for the first time.
-func _ready() -> void:
-	load_data()
-
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta: float) -> void:
-	pass
 	
 func add_coins(amount):
-	coins += amount
+	self.coins += amount
 	
 func add_gems(amount):
-	gems += amount
+	self.gems += amount
 	
 func save_data() -> void:
+	return
 	if is_loading:
 		return
 	var data: Dictionary = {
@@ -68,6 +75,7 @@ func save_data() -> void:
 	file.close()	
 	
 func load_data() -> void:
+	return
 	if FileAccess.file_exists(SAVE_PATH):
 		is_loading = true
 		var file := FileAccess.open(SAVE_PATH, FileAccess.READ)
@@ -79,6 +87,7 @@ func load_data() -> void:
 			coins = result.get("coins", 50)
 			gems = result.get("gems", 50)
 			food_inventory = result.get("food", food_inventory)
-			hunger = result.get("hunger", 50)
-			energy = result.get("energy", 50)
+			hunger = result.get("hunger", 100)
+			energy = result.get("energy", 100)
 		is_loading = false
+		
