@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://kdingl4lqdoy"
-path="res://.godot/imported/vecteezy_game-bars-with-gold-coins-star-power-symbol_20237037.jpg-0787cba08898f9af3207efaf5ef8e0c0.ctex"
+uid="uid://c4qll4r72f315"
+path="res://.godot/imported/hunger_energy_bars_with_bg.png-4753a3e03b79215d63356bcf701f2c80.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/vecteezy_game-bars-with-gold-coins-star-power-symbol_20237037.jpg"
-dest_files=["res://.godot/imported/vecteezy_game-bars-with-gold-coins-star-power-symbol_20237037.jpg-0787cba08898f9af3207efaf5ef8e0c0.ctex"]
+source_file="res://assets/ui/hunger_energy_bars_with_bg.png"
+dest_files=["res://.godot/imported/hunger_energy_bars_with_bg.png-4753a3e03b79215d63356bcf701f2c80.ctex"]
 
 [params]
 

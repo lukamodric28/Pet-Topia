@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cashjvvpnfy7p"
-path="res://.godot/imported/shutterstock-hunger-and-energy-bars-removebg-preview.png-491f16406a16d8209e5a17d6cae519ba.ctex"
+uid="uid://cuqyrceyfn1wo"
+path="res://.godot/imported/apple_without_bg.png-e60e5d59b3ef8807b3091ee989472495.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/shutterstock-hunger-and-energy-bars-removebg-preview.png"
-dest_files=["res://.godot/imported/shutterstock-hunger-and-energy-bars-removebg-preview.png-491f16406a16d8209e5a17d6cae519ba.ctex"]
+source_file="res://assets/ui/apple_without_bg.png"
+dest_files=["res://.godot/imported/apple_without_bg.png-e60e5d59b3ef8807b3091ee989472495.ctex"]
 
 [params]
 

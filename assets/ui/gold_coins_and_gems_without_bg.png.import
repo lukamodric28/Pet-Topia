@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dngs67hl1wt4b"
-path="res://.godot/imported/vecteezy_game-bars-with-gold-coins-star-power-symbol_20237037-removebg-preview.png-8688967f0be2911d89acb954aa5a46cd.ctex"
+uid="uid://bcbymyjb51042"
+path="res://.godot/imported/gold_coins_and_gems_without_bg.png-a6975f3697342db5e06c59eecc7dae9b.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/ui/vecteezy_game-bars-with-gold-coins-star-power-symbol_20237037-removebg-preview.png"
-dest_files=["res://.godot/imported/vecteezy_game-bars-with-gold-coins-star-power-symbol_20237037-removebg-preview.png-8688967f0be2911d89acb954aa5a46cd.ctex"]
+source_file="res://assets/ui/gold_coins_and_gems_without_bg.png"
+dest_files=["res://.godot/imported/gold_coins_and_gems_without_bg.png-a6975f3697342db5e06c59eecc7dae9b.ctex"]
 
 [params]
 

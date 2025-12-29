@@ -1,6 +1,7 @@
-[gd_scene load_steps=32 format=3 uid="uid://cq1bl6jc7sa80"]
+[gd_scene load_steps=34 format=3 uid="uid://cq1bl6jc7sa80"]
 
 [ext_resource type="Texture2D" uid="uid://bkl3xjdndt1tp" path="res://assets/backgrounds/home_screen_bg.png" id="1_krot7"]
+[ext_resource type="Script" uid="uid://dbw8rje7v5mf5" path="res://scripts/home.gd" id="1_rqor2"]
 [ext_resource type="Texture2D" uid="uid://d2xlckiyekodv" path="res://assets/sprites/dog_animation/idle 1.png" id="2_ju5sp"]
 [ext_resource type="Texture2D" uid="uid://c7kimjybao6ia" path="res://assets/sprites/dog_animation/idle 6.png" id="3_o7pnx"]
 [ext_resource type="Texture2D" uid="uid://dio6g0ommegn5" path="res://assets/sprites/dog_animation/idle 3.png" id="4_aish6"]
@@ -17,11 +18,11 @@
 [ext_resource type="Texture2D" uid="uid://cf4tic2l3tusg" path="res://assets/sprites/dog_animation/idle 18.png" id="15_miq5y"]
 [ext_resource type="Texture2D" uid="uid://bc7pq5t8jkylc" path="res://assets/sprites/dog_animation/idle 13.png" id="16_mg211"]
 [ext_resource type="Script" uid="uid://c61orpfqcyo3l" path="res://scripts/animated_sprite_2d.gd" id="17_o7pnx"]
-[ext_resource type="Texture2D" uid="uid://dngs67hl1wt4b" path="res://assets/ui/vecteezy_game-bars-with-gold-coins-star-power-symbol_20237037-removebg-preview.png" id="18_aish6"]
+[ext_resource type="Texture2D" uid="uid://bcbymyjb51042" path="res://assets/ui/gold_coins_and_gems_without_bg.png" id="18_6k6s7"]
 [ext_resource type="Script" uid="uid://cl4jsmd4g06q5" path="res://scripts/coin_label.gd" id="19_snnha"]
 [ext_resource type="Script" uid="uid://bb8u3aybb7ob2" path="res://scripts/gem_label.gd" id="20_e42qu"]
-[ext_resource type="Texture2D" uid="uid://bowyjtr0ln32e" path="res://assets/ui/Screenshot 2025-12-28 174300.png" id="21_kc6b6"]
-[ext_resource type="Texture2D" uid="uid://cashjvvpnfy7p" path="res://assets/ui/shutterstock-hunger-and-energy-bars-removebg-preview.png" id="21_ppa51"]
+[ext_resource type="Texture2D" uid="uid://c4qll4r72f315" path="res://assets/ui/hunger_energy_bars_with_bg.png" id="21_rqor2"]
+[ext_resource type="Texture2D" uid="uid://dprhm85rwdg0n" path="res://assets/ui/hunger_energy_bars_without_bg.png" id="22_qmde4"]
 [ext_resource type="Script" uid="uid://c2ivmpddcw628" path="res://scripts/hunger_bar.gd" id="23_jdxxw"]
 [ext_resource type="Script" uid="uid://bev8ipxalx5v2" path="res://scripts/energy_bar.gd" id="24_6k6s7"]
 
@@ -79,31 +80,35 @@ animations = [{
 }]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_snnha"]
-atlas = ExtResource("18_aish6")
+atlas = ExtResource("18_6k6s7")
 region = Rect2(30, 15, 217, 81)
 margin = Rect2(-17, -5, 0, 0)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_aish6"]
-atlas = ExtResource("18_aish6")
+atlas = ExtResource("18_6k6s7")
 region = Rect2(288, 112.5, 214, 83)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_jdxxw"]
-atlas = ExtResource("21_kc6b6")
+atlas = ExtResource("21_rqor2")
 region = Rect2(195.00494, 1.9675827, 483.15326, 103.92984)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_kc6b6"]
-atlas = ExtResource("21_ppa51")
+atlas = ExtResource("22_qmde4")
 region = Rect2(36.624084, 194.69385, 414.748, 113.223175)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_6k6s7"]
-atlas = ExtResource("21_kc6b6")
+atlas = ExtResource("21_rqor2")
 region = Rect2(218.73035, -36.767036, 411.17944, 140.30768)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_rqor2"]
-atlas = ExtResource("21_ppa51")
+atlas = ExtResource("22_qmde4")
 region = Rect2(42.986755, 319.668, 425.93924, 146.556)
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_rqor2"]
+bg_color = Color(0.11764706, 0.7254902, 0, 1)
+
 [node name="Home" type="Node2D"]
+script = ExtResource("1_rqor2")
 
 [node name="HomeBG" type="NinePatchRect" parent="."]
 offset_right = 800.0
@@ -143,12 +148,12 @@ layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.282
 anchor_top = 0.25
-anchor_right = 0.625
+anchor_right = 0.81100005
 anchor_bottom = 0.69200003
 offset_left = 9.161999
-offset_right = -5.375
+offset_right = 0.050994873
 offset_bottom = 0.016002655
-text = "0"
+text = "50"
 script = ExtResource("19_snnha")
 
 [node name="GemBar" type="TextureRect" parent="Stats"]
@@ -175,7 +180,7 @@ offset_left = 6.6880074
 offset_top = 16.0
 offset_right = -8.5759735
 offset_bottom = -14.0
-text = "0"
+text = "50"
 script = ExtResource("20_e42qu")
 
 [node name="HungerBar" type="TextureProgressBar" parent="Stats"]
@@ -229,3 +234,14 @@ offset_right = -134.97772
 offset_bottom = -0.9465141
 theme_override_font_sizes/font_size = 35
 text = "100"
+
+[node name="ShopButton" type="Button" parent="."]
+offset_left = 151.0
+offset_top = 694.0
+offset_right = 247.0
+offset_bottom = 772.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/pressed = SubResource("StyleBoxFlat_rqor2")
+text = "SHOP"
+
+[connection signal="pressed" from="ShopButton" to="." method="_on_shop_button_pressed"]

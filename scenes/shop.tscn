@@ -1,0 +1,400 @@
+[gd_scene load_steps=29 format=3 uid="uid://b7n3hwn1cfhcw"]
+
+[ext_resource type="Texture2D" uid="uid://blriolc4stkmk" path="res://assets/backgrounds/shop_background.jpeg" id="1_lx5au"]
+[ext_resource type="Script" uid="uid://c80l5vwb0i1bu" path="res://scripts/shop.gd" id="1_y6sft"]
+[ext_resource type="Texture2D" uid="uid://bcbymyjb51042" path="res://assets/ui/gold_coins_and_gems_without_bg.png" id="2_8r1wq"]
+[ext_resource type="Texture2D" uid="uid://cuqyrceyfn1wo" path="res://assets/ui/apple_without_bg.png" id="3_ajxib"]
+[ext_resource type="Texture2D" uid="uid://dtesloctqn6le" path="res://assets/ui/coin_icon.png" id="4_ajxib"]
+[ext_resource type="Texture2D" uid="uid://bfpgd8von8yir" path="res://assets/ui/pizza_without_bg.png" id="4_y6sft"]
+[ext_resource type="Texture2D" uid="uid://nclya28flppu" path="res://assets/ui/meat_without_bg.png" id="5_m4ofw"]
+[ext_resource type="Texture2D" uid="uid://dh71uccg53yt6" path="res://assets/ui/fish_without_bg.png" id="6_heatd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1v8qu"]
+atlas = ExtResource("2_8r1wq")
+region = Rect2(39.644814, 16.263187, 221.68436, 81.51497)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8r1wq"]
+atlas = ExtResource("2_8r1wq")
+region = Rect2(288.579, 115.42111, 210.39487, 77.189026)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ajxib"]
+bg_color = Color(1, 0.64705884, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_y6sft"]
+bg_color = Color(0.33084142, 0.70649135, 3.85046e-07, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_m4ofw"]
+bg_color = Color(0.11697393, 0.725102, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_y6sft"]
+atlas = ExtResource("4_ajxib")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_heatd"]
+bg_color = Color(1, 0.64705884, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1v8qu"]
+bg_color = Color(0.32941177, 0.7058824, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_44xle"]
+bg_color = Color(0.11764706, 0.7254902, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m4ofw"]
+atlas = ExtResource("4_ajxib")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_24it5"]
+bg_color = Color(1.0390989, 0.67307746, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44xle"]
+atlas = ExtResource("5_m4ofw")
+region = Rect2(331.0953, 0, 103.13504, 89.380264)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_7mqwv"]
+bg_color = Color(0.32941177, 0.7058824, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gobkm"]
+bg_color = Color(0.11764706, 0.7254902, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_heatd"]
+atlas = ExtResource("4_ajxib")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_j14q8"]
+bg_color = Color(1.0390989, 0.67307746, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5u241"]
+bg_color = Color(0.32941177, 0.7058824, 0, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pqync"]
+bg_color = Color(0.11764706, 0.7254902, 0, 1)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ajxib"]
+atlas = ExtResource("4_ajxib")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yuijs"]
+bg_color = Color(0.11764706, 0.7254902, 0, 1)
+
+[node name="Shop" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_y6sft")
+
+[node name="ShopBG" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 1.0
+texture = ExtResource("1_lx5au")
+expand_mode = 1
+
+[node name="Stats" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="CoinBar" type="TextureRect" parent="Stats"]
+layout_mode = 1
+offset_left = 23.0
+offset_top = 3.0
+offset_right = 206.0
+offset_bottom = 58.0
+texture = SubResource("AtlasTexture_1v8qu")
+expand_mode = 1
+
+[node name="CoinLabel" type="Label" parent="Stats/CoinBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.35500002
+anchor_top = 0.30900002
+anchor_right = 0.874
+anchor_bottom = 0.72700006
+offset_left = 0.034996033
+offset_top = 0.0049991608
+offset_right = 0.057998657
+offset_bottom = 0.014995575
+text = "50"
+
+[node name="GemBar" type="TextureRect" parent="Stats"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 5.0
+anchor_right = 9.375
+anchor_bottom = 1.4000001
+offset_top = 4.0
+texture = SubResource("AtlasTexture_8r1wq")
+expand_mode = 1
+
+[node name="GemLabel" type="Label" parent="Stats/GemBar"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.36
+anchor_top = 0.30800003
+anchor_right = 0.90900004
+anchor_bottom = 0.75000006
+offset_top = -0.016000748
+offset_right = -0.07501221
+text = "50"
+
+[node name="GridContainer" type="GridContainer" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.31
+anchor_top = 0.33100003
+anchor_right = 0.69000006
+anchor_bottom = 0.669
+offset_top = 0.099975586
+offset_right = -6.1035156e-05
+offset_bottom = -0.10003662
+grow_horizontal = 2
+grow_vertical = 2
+columns = 2
+
+[node name="ApplePanel" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_ajxib")
+
+[node name="AppleIcon" type="TextureRect" parent="GridContainer/ApplePanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.887
+anchor_bottom = 0.90500003
+offset_left = -13.0
+offset_top = -5.0
+offset_right = -44.050003
+offset_bottom = -53.75
+texture = ExtResource("3_ajxib")
+expand_mode = 1
+
+[node name="ApplePrice" type="Label" parent="GridContainer/ApplePanel"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 1.0
+offset_right = 147.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 28
+text = "10"
+
+[node name="AppleOwned" type="Label" parent="GridContainer/ApplePanel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 73.0
+offset_right = 76.0
+offset_bottom = 96.0
+text = "0 Owned"
+
+[node name="AppleBuy" type="Button" parent="GridContainer/ApplePanel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 99.0
+offset_right = 72.0
+offset_bottom = 146.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_y6sft")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_m4ofw")
+text = "BUY"
+
+[node name="CoinIcon" type="TextureRect" parent="GridContainer/ApplePanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.027
+anchor_bottom = 0.027
+offset_left = 79.0
+offset_top = -4.05
+offset_right = 118.0
+offset_bottom = 34.95
+texture = SubResource("AtlasTexture_y6sft")
+expand_mode = 1
+
+[node name="PizzaPanel" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_heatd")
+
+[node name="PizzaIcon" type="TextureRect" parent="GridContainer/PizzaPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -16.0
+offset_top = -14.0
+offset_right = -49.0
+offset_bottom = -61.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_y6sft")
+expand_mode = 1
+
+[node name="PizzaPrice" type="Label" parent="GridContainer/PizzaPanel"]
+layout_mode = 0
+offset_left = 117.0
+offset_top = -2.0
+offset_right = 149.0
+offset_bottom = 37.0
+theme_override_font_sizes/font_size = 28
+text = "25"
+
+[node name="PizzaOwned" type="Label" parent="GridContainer/PizzaPanel"]
+layout_mode = 0
+offset_left = 5.0
+offset_top = 76.0
+offset_right = 74.0
+offset_bottom = 99.0
+text = "0 Owned"
+
+[node name="PizzaBuy" type="Button" parent="GridContainer/PizzaPanel"]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 100.0
+offset_right = 73.0
+offset_bottom = 148.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_1v8qu")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_44xle")
+text = "BUY"
+
+[node name="CoinIcon" type="TextureRect" parent="GridContainer/PizzaPanel"]
+layout_mode = 0
+offset_left = 81.0
+offset_top = -2.0
+offset_right = 121.0
+offset_bottom = 38.0
+texture = SubResource("AtlasTexture_m4ofw")
+expand_mode = 1
+
+[node name="MeatPanel" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_24it5")
+
+[node name="MeatIcon" type="TextureRect" parent="GridContainer/MeatPanel"]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 0.94200003
+anchor_bottom = 1.0
+offset_top = -4.0
+offset_right = -58.300003
+offset_bottom = -65.0
+texture = SubResource("AtlasTexture_44xle")
+expand_mode = 1
+
+[node name="MeatOwned" type="Label" parent="GridContainer/MeatPanel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 69.0
+offset_right = 72.0
+offset_bottom = 102.0
+text = "0 Owned"
+
+[node name="MeatPrice" type="Label" parent="GridContainer/MeatPanel"]
+layout_mode = 0
+offset_left = 116.0
+offset_top = 1.0
+offset_right = 156.0
+offset_bottom = 40.0
+theme_override_font_sizes/font_size = 28
+text = "40"
+
+[node name="MeatBuy" type="Button" parent="GridContainer/MeatPanel"]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 95.0
+offset_right = 71.0
+offset_bottom = 142.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_7mqwv")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_gobkm")
+text = "BUY"
+
+[node name="CoinIcon" type="TextureRect" parent="GridContainer/MeatPanel"]
+layout_mode = 0
+offset_left = 78.0
+offset_right = 118.0
+offset_bottom = 40.0
+texture = SubResource("AtlasTexture_heatd")
+expand_mode = 1
+
+[node name="FishPanel" type="Panel" parent="GridContainer"]
+custom_minimum_size = Vector2(150, 150)
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_j14q8")
+
+[node name="FishIcon" type="TextureRect" parent="GridContainer/FishPanel"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -22.0
+offset_top = -16.0
+offset_right = -53.0
+offset_bottom = -64.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("6_heatd")
+expand_mode = 1
+
+[node name="FishOwned" type="Label" parent="GridContainer/FishPanel"]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 69.0
+offset_right = 74.0
+offset_bottom = 92.0
+text = "0 Owned"
+
+[node name="FishPrice" type="Label" parent="GridContainer/FishPanel"]
+layout_mode = 0
+offset_left = 115.0
+offset_top = 2.0
+offset_right = 155.0
+offset_bottom = 41.0
+theme_override_font_sizes/font_size = 28
+text = "15"
+
+[node name="FishBuy" type="Button" parent="GridContainer/FishPanel"]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 98.0
+offset_right = 69.0
+offset_bottom = 145.0
+theme_override_styles/normal = SubResource("StyleBoxFlat_5u241")
+theme_override_styles/pressed = SubResource("StyleBoxFlat_pqync")
+text = "BUY"
+
+[node name="CoinIcon" type="TextureRect" parent="GridContainer/FishPanel"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 4.0
+offset_right = 117.0
+offset_bottom = 43.0
+texture = SubResource("AtlasTexture_ajxib")
+expand_mode = 1
+
+[node name="WarningLabel" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.33600003
+anchor_top = 0.66400003
+anchor_right = 0.669
+anchor_bottom = 0.711
+offset_left = 5.1999817
+offset_top = -343.60004
+offset_right = 4.799988
+offset_bottom = -343.90002
+theme_override_colors/font_color = Color(1, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 30
+
+[node name="HomeButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 567.0
+offset_top = 707.0
+offset_right = 674.0
+offset_bottom = 788.0
+theme_override_font_sizes/font_size = 30
+theme_override_styles/pressed = SubResource("StyleBoxFlat_yuijs")
+text = "HOME"
+
+[connection signal="pressed" from="GridContainer/ApplePanel/AppleBuy" to="." method="_on_apple_buy_button_pressed"]
+[connection signal="pressed" from="GridContainer/PizzaPanel/PizzaBuy" to="." method="_on_pizza_buy_button_pressed"]
+[connection signal="pressed" from="GridContainer/MeatPanel/MeatBuy" to="." method="_on_meat_buy_button_pressed"]
+[connection signal="pressed" from="GridContainer/FishPanel/FishBuy" to="." method="_on_fish_buy_button_pressed"]
+[connection signal="pressed" from="HomeButton" to="." method="_on_home_button_pressed"]

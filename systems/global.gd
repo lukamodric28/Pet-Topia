@@ -40,24 +40,32 @@ func _ready():
 	timer.autostart = true
 	add_child(timer)
 	timer.timeout.connect(_on_hunger_timer_timeout)
-	
+
 func _on_hunger_timer_timeout():
 	if hunger > 0:
 		hunger -= 1
 		print("Pet is getting hungry! Current hunger: ", hunger)
 
 var food_inventory: Dictionary = {
-	"Apple": 5,
-	"Meat": 5, 
-	"Pizza": 5,
-	"Fish": 5
+	"Apple": 0,
+	"Meat": 0, 
+	"Pizza": 0,
+	"Fish": 0
 }
-	
+
 func add_coins(amount):
 	self.coins += amount
 	
 func add_gems(amount):
 	self.gems += amount
+	
+func buy_item(item_name: String, cost: int):
+	if coins >= cost:
+		self.coins -= cost
+		food_inventory[item_name] += 1
+		save_data() 
+		return true 
+	return false
 	
 func save_data() -> void:
 	return
